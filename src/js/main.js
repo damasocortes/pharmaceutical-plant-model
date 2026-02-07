@@ -184,7 +184,8 @@ class PharmaceuticalPlantApp {
     switch(event.key) {
       case 'Escape':
         this.uiManager.hideInfoPanel();
-        this.uiManager.toggleHelp(); // Cerrar ayuda si está abierta
+        this.uiManager.closeHelp();
+        this.uiManager.endTour();
         break;
       case '1':
         this.uiManager.toggleFlow('personal');

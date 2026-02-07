@@ -323,6 +323,13 @@ export class UIManager {
   }
 
   /**
+   * Cierra el overlay de ayuda si está abierto
+   */
+  closeHelp() {
+    this.helpOverlay.classList.remove('show');
+  }
+
+  /**
    * Actualiza el estado de carga
    */
   updateLoadingState(isLoading) {
