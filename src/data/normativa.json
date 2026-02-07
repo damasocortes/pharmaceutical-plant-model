@@ -1,0 +1,103 @@
+{
+  "norma": "NOM-059-SSA1-2015",
+  "titulo": "Buenas prácticas de fabricación de medicamentos",
+  "articulos_aplicables": [
+    {
+      "articulo": "5.1",
+      "titulo": "Generalidades",
+      "descripcion": "Las instalaciones para la fabricación de medicamentos deben estar ubicadas, diseñadas y construidas de tal forma que faciliten las operaciones de limpieza, mantenimiento y operaciones propias de la fabricación."
+    },
+    {
+      "articulo": "5.2",
+      "titulo": "Instalaciones",
+      "descripcion": "Las áreas de producción deben estar claramente delimitadas y separadas para evitar contaminación cruzada."
+    },
+    {
+      "articulo": "5.3",
+      "titulo": "Áreas de producción",
+      "descripcion": "Las áreas de producción deben diseñarse para permitir una secuencia lógica de las operaciones de manufactura y evitar el riesgo de contaminación cruzada."
+    },
+    {
+      "articulo": "5.4",
+      "titulo": "Instalaciones auxiliares",
+      "descripcion": "Áreas de servicios como vestidores, sanitarios y comedores deben estar separadas de las áreas de producción."
+    },
+    {
+      "articulo": "5.5",
+      "titulo": "Área de recepción y cuarentena",
+      "descripcion": "Debe existir un área separada para recepción, identificación y cuarentena de materias primas."
+    },
+    {
+      "articulo": "5.6",
+      "titulo": "Almacenes",
+      "descripcion": "Los almacenes deben tener capacidad suficiente y condiciones apropiadas para almacenar ordenadamente materiales y productos."
+    },
+    {
+      "articulo": "5.7",
+      "titulo": "Prevención de contaminación cruzada",
+      "descripcion": "Se deben establecer medidas para prevenir la contaminación cruzada mediante el diseño adecuado de instalaciones, flujos de personal, materiales y aire."
+    },
+    {
+      "articulo": "5.8",
+      "titulo": "Áreas de producción",
+      "descripcion": "Las áreas de producción deben tener acabados lisos, impermeables, sin grietas, fáciles de limpiar y desinfectar."
+    },
+    {
+      "articulo": "5.9",
+      "titulo": "Área de envasado y acondicionamiento",
+      "descripcion": "Debe haber áreas separadas para el envasado de diferentes productos farmacéuticos."
+    },
+    {
+      "articulo": "5.10",
+      "titulo": "Laboratorios de control de calidad",
+      "descripcion": "Los laboratorios de control de calidad deben estar separados de las áreas de producción."
+    },
+    {
+      "articulo": "5.11",
+      "titulo": "Sistemas de HVAC",
+      "descripcion": "Los sistemas de calefacción, ventilación y aire acondicionado deben ser apropiados para el tipo de producto y operación."
+    },
+    {
+      "articulo": "5.12",
+      "titulo": "Iluminación",
+      "descripcion": "La iluminación debe ser adecuada para todas las actividades."
+    },
+    {
+      "articulo": "5.13",
+      "titulo": "Instalaciones sanitarias",
+      "descripcion": "Debe haber instalaciones sanitarias adecuadas y separadas de las áreas de producción."
+    }
+  ],
+  "clasificacion_areas": {
+    "zona_negra": {
+      "descripcion": "Áreas de uso general, sin contacto directo con el producto",
+      "ejemplos": ["Sanitarios", "Pasillos externos", "Oficinas"],
+      "requisitos": "Limpieza general"
+    },
+    "zona_gris": {
+      "descripcion": "Áreas con contacto indirecto con el producto o materiales",
+      "ejemplos": ["Almacenes", "Vestidores lado limpio", "Área de lavado"],
+      "requisitos": "Control de limpieza, acceso restringido"
+    },
+    "zona_blanca": {
+      "descripcion": "Áreas de fabricación con contacto directo con el producto",
+      "ejemplos": ["Producción", "Envasado primario", "Control de calidad"],
+      "requisitos": "Ambiente controlado, presión positiva, personal con uniforme especial"
+    },
+    "zona_critica": {
+      "descripcion": "Áreas de productos estériles o altamente sensibles",
+      "ejemplos": ["Llenado aséptico", "Áreas de esterilización"],
+      "requisitos": "Ambiente clase A/B, flujo laminar, máximo control"
+    }
+  },
+  "requisitos_hvac": {
+    "presion_positiva": "Áreas limpias para evitar entrada de contaminantes",
+    "presion_negativa": "Áreas con riesgo de contaminación para evitar salida de contaminantes",
+    "presion_neutra": "Áreas generales sin riesgo especial",
+    "renovaciones_aire": {
+      "zona_gris": "10-15 renovaciones/hora",
+      "zona_blanca": "20-30 renovaciones/hora",
+      "zona_critica": "Mínimo 30 renovaciones/hora con flujo laminar"
+    }
+  }
+}

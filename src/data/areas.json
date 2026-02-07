@@ -1,0 +1,280 @@
+{
+  "areas": [
+    {
+      "id": "recepcion-cuarentena",
+      "nombre": "Área de Recepción y Cuarentena",
+      "funcion": "Recepción de materias primas, verificación inicial y resguardo temporal hasta su liberación por control de calidad",
+      "dimensiones": {
+        "largo": 8,
+        "ancho": 6,
+        "alto": 3
+      },
+      "clasificacion": "Zona Gris",
+      "color": "#808080",
+      "equipamiento": [
+        "Plataformas de carga/descarga",
+        "Estanterías de cuarentena",
+        "Báscula de piso",
+        "Sistema de identificación y etiquetado"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.5 - Recepción de materias primas",
+      "hvac": "Presión neutra, 10-12 renovaciones/hora",
+      "posicion": { "x": -30, "y": 0, "z": 20 }
+    },
+    {
+      "id": "almacen-materias-primas",
+      "nombre": "Almacén de Materias Primas",
+      "funcion": "Almacenamiento de materias primas aprobadas bajo condiciones controladas de temperatura y humedad",
+      "dimensiones": {
+        "largo": 10,
+        "ancho": 8,
+        "alto": 3.5
+      },
+      "clasificacion": "Zona Gris",
+      "color": "#909090",
+      "equipamiento": [
+        "Estanterías de almacenamiento",
+        "Sistema FIFO",
+        "Control de temperatura y humedad",
+        "Sistema de inventario"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.6 - Almacenamiento",
+      "hvac": "Presión neutra, temperatura controlada 15-25°C, humedad 35-65%",
+      "posicion": { "x": -30, "y": 0, "z": 5 }
+    },
+    {
+      "id": "area-pesado",
+      "nombre": "Zona de Pesado",
+      "funcion": "Pesado exacto de materias primas conforme a fórmula maestra",
+      "dimensiones": {
+        "largo": 6,
+        "ancho": 5,
+        "alto": 3
+      },
+      "clasificacion": "Zona Blanca",
+      "color": "#E8F4F8",
+      "equipamiento": [
+        "Balanzas analíticas",
+        "Cabinas de pesado con extracción",
+        "Sistema de documentación electrónico"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.8 - Área de producción",
+      "hvac": "Presión positiva (+10 Pa), clase D, 20 renovaciones/hora",
+      "posicion": { "x": -15, "y": 0, "z": 5 }
+    },
+    {
+      "id": "area-mezclado",
+      "nombre": "Zona de Mezclado",
+      "funcion": "Mezcla homogénea de componentes de la formulación",
+      "dimensiones": {
+        "largo": 8,
+        "ancho": 7,
+        "alto": 4
+      },
+      "clasificacion": "Zona Blanca",
+      "color": "#E8F4F8",
+      "equipamiento": [
+        "Mezclador en V o de doble cono",
+        "Tamizadores",
+        "Contenedores IBC"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.8 - Área de producción",
+      "hvac": "Presión positiva (+15 Pa), clase D, 20 renovaciones/hora",
+      "posicion": { "x": -5, "y": 0, "z": 5 }
+    },
+    {
+      "id": "area-granulacion",
+      "nombre": "Zona de Granulación",
+      "funcion": "Granulación húmeda o seca para mejorar propiedades de flujo y compresión",
+      "dimensiones": {
+        "largo": 9,
+        "ancho": 7,
+        "alto": 4.5
+      },
+      "clasificacion": "Zona Blanca",
+      "color": "#E8F4F8",
+      "equipamiento": [
+        "Granulador de alto cizallamiento",
+        "Secador de lecho fluido",
+        "Molino de granulación"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.8 - Área de producción",
+      "hvac": "Presión positiva (+15 Pa), clase D, 25 renovaciones/hora, control humedad",
+      "posicion": { "x": 5, "y": 0, "z": 5 }
+    },
+    {
+      "id": "area-compresion",
+      "nombre": "Zona de Compresión",
+      "funcion": "Compresión de granulado para formar tabletas",
+      "dimensiones": {
+        "largo": 10,
+        "ancho": 8,
+        "alto": 4
+      },
+      "clasificacion": "Zona Blanca",
+      "color": "#D0E8F0",
+      "equipamiento": [
+        "Tableteadora rotatoria",
+        "Sistema de control de peso y dureza",
+        "Detector de metales",
+        "Aspiración de polvos"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.8 - Área de producción",
+      "hvac": "Presión positiva (+20 Pa), clase C, 25 renovaciones/hora",
+      "posicion": { "x": 18, "y": 0, "z": 5 }
+    },
+    {
+      "id": "area-recubrimiento",
+      "nombre": "Zona de Recubrimiento",
+      "funcion": "Aplicación de recubrimiento funcional o cosmético a las tabletas",
+      "dimensiones": {
+        "largo": 8,
+        "ancho": 6,
+        "alto": 4
+      },
+      "clasificacion": "Zona Blanca",
+      "color": "#D0E8F0",
+      "equipamiento": [
+        "Recubridora (coating pan)",
+        "Sistema de secado",
+        "Preparación de solución de recubrimiento"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.8 - Área de producción",
+      "hvac": "Presión positiva (+15 Pa), clase D, 20 renovaciones/hora",
+      "posicion": { "x": 18, "y": 0, "z": -8 }
+    },
+    {
+      "id": "control-calidad",
+      "nombre": "Laboratorio de Control de Calidad",
+      "funcion": "Análisis fisicoquímicos y microbiológicos de materias primas, producto en proceso y producto terminado",
+      "dimensiones": {
+        "largo": 12,
+        "ancho": 8,
+        "alto": 3.5
+      },
+      "clasificacion": "Zona Blanca",
+      "color": "#F0F8E8",
+      "equipamiento": [
+        "HPLC",
+        "Espectrofotómetro UV-Vis",
+        "Probador de disolución",
+        "Probador de friabilidad y dureza",
+        "Balanzas analíticas",
+        "Microscopio",
+        "Incubadoras",
+        "Campanas de flujo laminar"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.10 - Laboratorios de control de calidad",
+      "hvac": "Presión positiva (+10 Pa), 15 renovaciones/hora, temperatura controlada",
+      "posicion": { "x": 5, "y": 0, "z": -15 }
+    },
+    {
+      "id": "area-envasado",
+      "nombre": "Área de Envasado y Acondicionamiento",
+      "funcion": "Envasado primario (blister/frasco) y acondicionamiento secundario (estuches)",
+      "dimensiones": {
+        "largo": 12,
+        "ancho": 9,
+        "alto": 3.5
+      },
+      "clasificacion": "Zona Blanca",
+      "color": "#E8F4F8",
+      "equipamiento": [
+        "Línea de blister termoformado",
+        "Envasadora de frascos",
+        "Cartonadora automática",
+        "Impresora de lote y caducidad",
+        "Inspector visual automático"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.9 - Área de envasado",
+      "hvac": "Presión positiva (+10 Pa), clase D, 20 renovaciones/hora",
+      "posicion": { "x": 30, "y": 0, "z": 5 }
+    },
+    {
+      "id": "almacen-producto-terminado",
+      "nombre": "Almacén de Producto Terminado",
+      "funcion": "Almacenamiento de producto terminado liberado, listo para distribución",
+      "dimensiones": {
+        "largo": 10,
+        "ancho": 8,
+        "alto": 4
+      },
+      "clasificacion": "Zona Gris",
+      "color": "#A0A0A0",
+      "equipamiento": [
+        "Estanterías para producto terminado",
+        "Sistema FIFO",
+        "Control de temperatura",
+        "Área de cuarentena de PT",
+        "Zona de despacho"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.6 - Almacenamiento",
+      "hvac": "Presión neutra, temperatura controlada 15-25°C",
+      "posicion": { "x": 30, "y": 0, "z": 20 }
+    },
+    {
+      "id": "vestidores",
+      "nombre": "Vestidores y Área de Cambio",
+      "funcion": "Cambio de ropa de calle a ropa de trabajo/uniforme limpio",
+      "dimensiones": {
+        "largo": 8,
+        "ancho": 5,
+        "alto": 3
+      },
+      "clasificacion": "Zona Negra/Gris",
+      "color": "#606060",
+      "equipamiento": [
+        "Casilleros personales",
+        "Bancas",
+        "Sistema de ropa limpia",
+        "Contenedores de ropa sucia"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.4 - Instalaciones auxiliares",
+      "hvac": "Presión neutra, 10 renovaciones/hora",
+      "posicion": { "x": -30, "y": 0, "z": -10 }
+    },
+    {
+      "id": "sanitarios",
+      "nombre": "Sanitarios",
+      "funcion": "Servicios sanitarios para personal",
+      "dimensiones": {
+        "largo": 6,
+        "ancho": 4,
+        "alto": 3
+      },
+      "clasificacion": "Zona Negra",
+      "color": "#404040",
+      "equipamiento": [
+        "Sanitarios",
+        "Mingitorios",
+        "Lavabos",
+        "Dispensadores de jabón",
+        "Toallas desechables"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.4 - Instalaciones auxiliares",
+      "hvac": "Presión negativa (-10 Pa), extracción directa",
+      "posicion": { "x": -30, "y": 0, "z": -18 }
+    },
+    {
+      "id": "area-lavado",
+      "nombre": "Área de Lavado de Equipos",
+      "funcion": "Limpieza y sanitización de equipos de producción",
+      "dimensiones": {
+        "largo": 7,
+        "ancho": 6,
+        "alto": 3.5
+      },
+      "clasificacion": "Zona Gris",
+      "color": "#707070",
+      "equipamiento": [
+        "Lavadora automática de piezas",
+        "Estaciones de lavado manual",
+        "Área de secado",
+        "Almacén de equipos limpios"
+      ],
+      "norma": "NOM-059-SSA1-2015, Artículo 5.4 - Instalaciones auxiliares",
+      "hvac": "Presión neutra, extracción localizada, 15 renovaciones/hora",
+      "posicion": { "x": -15, "y": 0, "z": -15 }
+    }
+  ]
+}

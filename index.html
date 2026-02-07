@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modelo Digital Interactivo 3D de Planta Farmacéutica para Producción de Tabletas - NOM-059-SSA1-2015">
+  <meta name="keywords" content="planta farmacéutica, tabletas, BPF, NOM-059, modelo 3D">
+  <meta name="author" content="Equipo de Laboratorio">
+  <title>Modelo Digital de Planta Farmacéutica - Producción de Tabletas</title>
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./src/css/styles.css">
+  
+  <!-- Import map para Three.js -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Pantalla de carga -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <h2>Cargando Modelo 3D de Planta Farmacéutica...</h2>
+    <p>Preparando visualización interactiva</p>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div id="container">
+    <!-- Header -->
+    <header>
+      <h1>🏭 Modelo Digital de Planta Farmacéutica - Producción de Tabletas</h1>
+      <p>Diseño conforme a NOM-059-SSA1-2015 y Buenas Prácticas de Fabricación (BPF)</p>
+    </header>
+
+    <!-- Canvas 3D -->
+    <div id="canvas-container"></div>
+
+    <!-- Panel de controles -->
+    <aside id="controls-panel">
+      <h2>⚙️ Controles</h2>
+      
+      <h3>🎥 Vistas</h3>
+      <div class="view-controls">
+        <button id="btn-top-view">📐 Vista Superior</button>
+        <button id="btn-iso-view">📦 Vista 3D</button>
+        <button id="btn-front-view">👁️ Vista Frontal</button>
+        <button id="btn-side-view">↔️ Vista Lateral</button>
+      </div>
+
+      <h3>🔄 Flujos de Proceso</h3>
+      <div class="button-group">
+        <button id="btn-flow-personal" class="flow-btn">🚶 Flujo de Personal</button>
+        <button id="btn-flow-materiales" class="flow-btn">📦 Flujo de Materiales</button>
+        <button id="btn-flow-producto" class="flow-btn">💊 Flujo de Producto</button>
+        <button id="btn-flow-residuos" class="flow-btn">🗑️ Flujo de Residuos</button>
+        <button id="btn-clear-flows">❌ Limpiar Flujos</button>
+      </div>
+
+      <h3>🎮 Opciones</h3>
+      <div class="button-group">
+        <button id="btn-toggle-labels">🏷️ Ocultar Etiquetas</button>
+        <button id="btn-tour">🎓 Tour Educativo</button>
+        <button id="btn-help">❓ Ayuda</button>
+      </div>
+
+      <div style="margin-top: 20px; padding: 10px; background: #f8f9fa; border-radius: 5px; font-size: 12px;">
+        <strong>💡 Consejo:</strong> Haz clic en cualquier área para ver información detallada
+      </div>
+    </aside>
+
+    <!-- Panel de información -->
+    <aside id="info-panel">
+      <!-- El contenido se carga dinámicamente -->
+    </aside>
+
+    <!-- Leyenda de colores -->
+    <div id="legend">
+      <h3>📋 Clasificación de Áreas (BPF)</h3>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #404040;"></div>
+        <span>Zona Negra - Áreas generales</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #808080;"></div>
+        <span>Zona Gris - Contacto indirecto</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #E8F4F8;"></div>
+        <span>Zona Blanca - Áreas controladas</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #D0E8F0;"></div>
+        <span>Zona Blanca Crítica - Alta limpieza</span>
+      </div>
+    </div>
+
+    <!-- Panel de tour educativo -->
+    <div id="tour-panel">
+      <!-- El contenido se carga dinámicamente -->
+    </div>
+
+    <!-- Overlay de ayuda -->
+    <div id="help-overlay">
+      <button class="close-btn">×</button>
+      <h2>❓ Ayuda - Controles de Navegación</h2>
+      <ul>
+        <li><kbd>Click Izquierdo + Arrastrar</kbd> Rotar cámara</li>
+        <li><kbd>Rueda del Mouse</kbd> Zoom in/out</li>
+        <li><kbd>Click Derecho + Arrastrar</kbd> Mover vista (pan)</li>
+        <li><kbd>Click en Área</kbd> Ver información detallada</li>
+        <li><kbd>1</kbd> Activar flujo de personal</li>
+        <li><kbd>2</kbd> Activar flujo de materiales</li>
+        <li><kbd>3</kbd> Activar flujo de producto</li>
+        <li><kbd>4</kbd> Activar flujo de residuos</li>
+        <li><kbd>T</kbd> Vista superior</li>
+        <li><kbd>I</kbd> Vista isométrica</li>
+        <li><kbd>H</kbd> Mostrar/ocultar esta ayuda</li>
+        <li><kbd>ESC</kbd> Cerrar paneles</li>
+      </ul>
+      <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 5px;">
+        <h3 style="margin-bottom: 10px;">📖 Sobre este modelo</h3>
+        <p style="font-size: 14px; line-height: 1.6;">
+          Este modelo digital representa una planta farmacéutica diseñada conforme a la 
+          <strong>NOM-059-SSA1-2015</strong> (Buenas Prácticas de Fabricación) para la 
+          producción de <strong>tabletas</strong>. Incluye todas las áreas necesarias, 
+          flujos de proceso correctamente definidos y cumplimiento normativo.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script principal (módulo ES6) -->
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>
